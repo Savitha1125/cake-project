@@ -1,61 +1,71 @@
-// 
+
 import React, { useState } from "react";
 import "./detailpage.css";
 
 export default function Detail() {
-  const [activeMenu, setActiveMenu] = useState(null); // ✅ define state
-
+  const [activeMenu, setActiveMenu] = useState(null);
   return (
     <div className="container-fluid detailpage">
-      <div className="row text-center justify-content-start align-items-center">
-
-        {/* 🔹 EXPRESS always active */}
-        <div
-          className="col-auto menu-items active"
-          onMouseEnter={() => setActiveMenu(true)}
-          onMouseLeave={() => setActiveMenu(false)}
-        >
-          EXPRESS
-          {activeMenu === "express" && (
-            <div className="dropdown-box">
-              <div className="dropdown-item">Same Day Delivery</div>
-              <p className="dropdown-item1">Cakes</p>
-              <p className="dropdown">Flowers</p>
-              <p className="dropdown">Plants</p>
-              <p className="dropdown">Combos</p>
-              <p className="dropdown">Gifts same day</p>
-            </div>
-          )}
-        </div>
-
-        {/* 🔹 CAKES */}
-        <div
-          className="col-auto menu-item"
-          onMouseEnter={() => setActiveMenu(true)}
-      onMouseLeave={() => setActiveMenu(false)}
-        >
-          CAKES
-          {activeMenu === "cakes" && (
-            <div className="dropdown-box">
-              <div className="dropdown">Chocolate Cake</div>
-              <div className="dropdown">Red Velvet Cake</div>
-              <div className="dropdown-item">Photo Cake</div>
-              <div className="dropdown-item">Designer Cake</div>
-            </div>
-          )}
-        </div>
-
-        {/* 🔹 Other Menus */}
-        <div className="col-auto menu-item">FLOWERS</div>
-        <div className="col-auto menu-item">PLANTS</div>
-        <div className="col-auto menu-item">GIFTS</div>
-        <div className="col-auto menu-item">PERSONALIZED GIFTS</div>
+      <div className="row text-center align-items-center justify-content-between menu-row">
+        {/* 🔹 Left Menu Items */}
+        <div className="menu-left">
+          <div className="menu-items active">EXPRESS</div>
+          <div
+  className="menu-item"
+  onMouseEnter={() => setActiveMenu("cakes")}
+  onMouseLeave={() => setActiveMenu(null)}
+>
+  CAKES
+  {activeMenu === "cakes" && (
+    <div
+      className="mega-menu"
+      onMouseEnter={() => setActiveMenu("cakes")}
+      onMouseLeave={() => setActiveMenu(null)}
+    >
+      <div className="menu-column">
+        <h4>By Flavour</h4>
+        <p>Chocolate Cakes</p>
+        <p>Red Velvet Cakes</p>
+        <p>Butterscotch Cakes</p>
+        <p>Vanilla Cakes</p>
+        <p>Black Forest Cakes</p>
       </div>
 
-      {/* 🔹 Delivery Section */}
-      <div className="delivery-container">
-        <i className="fi fi-rr-motorcycle scooty"></i>
-        <span className="delivery-text">2 Hour Delivery Gifts</span>
+      <div className="menu-column">
+        <h4>By Type</h4>
+        <p>Designer Cakes</p>
+        <p>Photo Cakes</p>
+        <p>Theme Cakes</p>
+        <p>Heart Shape Cakes</p>
+      </div>
+
+      <div className="menu-column">
+        <h4>By Occasion</h4>
+        <p>Birthday Cakes</p>
+        <p>Anniversary Cakes</p>
+        <p>Kids Cakes</p>
+        <p>Festival Cakes</p>
+      </div>
+    </div>
+  )}
+</div>
+
+          <div className="menu-item">FLOWERS</div>
+          <div className="menu-item">PLANTS</div>
+          <div className="menu-item">GIFTS</div>
+          <div className="menu-item">PERSONALIZED GIFTS</div>
+          <div className="menu-item">CHOCOLATES</div>
+          <div className="menu-item">COMBOS</div>
+          <div className="menu-item">BIRTHDAY</div>
+          <div className="menu-item">ANNIVERSARY</div>
+          <div className="menu-item">OCCASIONS</div>
+        </div>
+
+        {/* 🔹 Right Side Delivery Box */}
+        <div className="delivery-container">
+          <i className="fi fi-rr-motorcycle scooty"></i>
+          <span className="delivery-text">2 Hour Delivery Gifts</span>
+        </div>
       </div>
     </div>
   );

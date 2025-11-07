@@ -988,7 +988,7 @@ input[type="radio"]  {
   font-size: 13px;
   white-space: normal;
   text-align: left;
-  z-index: 10;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -1073,9 +1073,10 @@ input[type="radio"]  {
   padding: 5px 10px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  z-index: 9999;
 }
 .tooltip-cart {
-   position: absolute;
+  position: absolute;
   top: 30px;
   font-size: 15px;
   font-weight: bold;
@@ -1084,4 +1085,5 @@ input[type="radio"]  {
   padding: 5px 10px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  z-index: 9999;
 }

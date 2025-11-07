@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import Detail from './Detail';
+import Carosual from './Carosual';
 
 export default function Page() {
   const [showPartnerTooltip, setShowPartnerTooltip] = useState(false);
@@ -83,6 +84,7 @@ export default function Page() {
 
         <SearchBar/>
         <Detail/>
+        <Carosual/>
       </div>
     </>
   );

@@ -10,9 +10,12 @@
   align-items: center;
   justify-content:flex-start; 
   white-space: nowrap; 
-  overflow-y: hidden;
   scrollbar-width: none;
   padding: 15px 50px;
+  overflow-y: visible; 
+  overflow-x: hidden;
+  position: relative; 
+  z-index: 10;
 }
 .menu-items{
   font-weight: 500;
@@ -28,6 +31,7 @@
   color: #444;
   cursor: pointer;
   transition: color 0.3s ease;
+  gap:20px
 }
 
 .menu-item:hover {
@@ -35,12 +39,14 @@
 }
 
 .menu-items.active {
-  color: #de0f16;
-  font-weight: 600;
+  color: red  !important; 
+  font-weight: bold !important;
 }
 
+
 .delivery-container {
-  position: relative;
+  position: absolute;
+  right: 10%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -49,8 +55,10 @@
   font-size: 18px;
   overflow: hidden;
   width: 200px; 
+  max-height: 100px;
   padding-left: 40px; 
- 
+  float: right;
+  padding: 8px;
 }
 
 .scooty {
@@ -68,7 +76,8 @@
   }
 }
 .delivery-text{
-  font-size: 16px;
+  font-size: 15px;
+  position: relative;
 }
 .dropdown-box {
   position: absolute;
@@ -83,14 +92,53 @@
   z-index: 999;
   font-size: 11px;
 }
+.menu-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.dropdown-item {
-  font-size: 12px;
-  padding: 8px 12px;
+.menu-left {
+  display: flex;
+  gap: 22px;
+  font-weight: 600;
+  font-size: 14px;
+}
+/* ✅ Mega Menu Styles */
+.mega-menu {
+  position: absolute;
+  top: 100%;
+  left: 5%;
+  width: 800px;
+  background: #fff;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.menu-column {
+  width: 30%;
+}
+
+.menu-column h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff3385;
+  margin-bottom: 8px;
+}
+
+.menu-column p {
+  font-size: 13px;
   color: #333;
-  text-align: left;
-  font-weight: bold;
+  margin: 6px 0;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: color 0.3s ease;
+}
+
+.menu-column p:hover {
+  color: #ff3385;
 }
 
