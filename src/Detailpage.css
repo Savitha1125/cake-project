@@ -12,8 +12,7 @@
   white-space: nowrap; 
   scrollbar-width: none;
   padding: 15px 50px;
-  overflow-y: visible; 
-  overflow-x: hidden;
+  overflow: visible; 
   position: relative; 
   z-index: 10;
 }
@@ -108,15 +107,19 @@
 .mega-menu {
   position: absolute;
   top: 100%;
-  left: 5%;
-  width: 800px;
+  left: 2%;
+  min-width: 800px;
   background: #fff;
   border: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 35px; 
+  gap: 35px; 
+  align-items: stretch;
 }
 
 .menu-column {
@@ -126,14 +129,14 @@
 .menu-column h4 {
   font-size: 14px;
   font-weight: 600;
-  color: #ff3385;
+  color:black;
   margin-bottom: 8px;
 }
 
 .menu-column p {
   font-size: 13px;
   color: #333;
-  margin: 6px 0;
+  margin: 10px 0;
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -141,4 +144,96 @@
 .menu-column p:hover {
   color: #ff3385;
 }
+.menu-column .truffle{
+ position: relative;
+ right: 5px;
+}
+.menu-column .birth{
+  position: relative;
+  right: 5px;
+}
+.menu-column .choco{
+  position: relative;
+  right: 6px;
+}
+.menu-column .kids{
+  position: relative;
+  right:5px;
+}
+.menu-column .egg{
+  position: relative;
+  right:10px;
+}
+.truf{
+  position: relative;
+  left:5px
+}
+.menu-separator {
+  display: inline-block;
+  background-color: rgb(243, 134, 56); 
+  width: 4px;               
+  height: 14px;          
+  margin-right: 12px;            
+  vertical-align: middle;   
+  position: relative;
+  bottom: 2px;
+}
+/* ✅ Sub-section for Cakes by Weight */
+.sub-section {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+}
 
+.sub-section h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 6px;
+}
+
+.sub-section p {
+  font-size: 13px;
+  color: #404040;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sub-section p:hover {
+  color: #f65ea2;
+}
+.menu-column-1 {
+  width: 22%;
+  padding-left: 25px; 
+  position: relative;
+  margin-left: 20px;
+}
+.menu-column-1::before {
+  content: "";
+  position: absolute;
+  left:20px;
+  top: -20px; 
+  bottom: -20px;
+  width: 0.8px;
+  background-color: #c0bebd; 
+}
+.menu-column-1 h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f65ea2;
+  margin-bottom: 8px;
+}
+
+.menu-column-1 p {
+  font-size: 13px;
+  color: #444;
+  margin: 4px 0;
+}
+@media (max-width: 768px) {
+  .menu-left .menu-item,
+  .menu-left .menu-items,
+  .delivery-container {
+    display: none !important; /* hide text menu items */
+  }
+}

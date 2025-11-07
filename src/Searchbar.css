@@ -71,20 +71,20 @@
   background-color: #ccc;  
 }
 .sub-menu{
-  position: absolute;
+  position: relative;
   top:45px;
 
   left:5%;
   font-size: 14px;
 }
 .sub-menu1{
-  position: absolute;
+  position: relative;
   top:45px;
   left: 32%;
   font-size: 14px;
 }
 .sub-menu2{
-  position:absolute;
+  position:relative;
   top:45px;
   left:63%;
   font-size: 14px;
@@ -93,31 +93,31 @@
   font-weight: bold;
 }
 .sub-menu00{
-  position: absolute;
+  position:relative;
   top:75px;
   left:5%;
   font-size: 14px;
 }
 .sub-menu01{
-  position: absolute;
+  position: relative;
   top:75px;
   left:32%;
   font-size: 14px;
 }
 .sub-menu02{
-  position: absolute;
+  position: relative;
   top:75px;
   left:63%;
   font-size: 14px;
 }
 .sub-menu3{
-  position: absolute;
+  position: relative;
   top:105px;
   left:5%;
   font-size: 14px;
 }
 .sub-menu001{
-  position: absolute;
+  position: relative;
   top:105px;
   left:43%;
   font-size: 14px;

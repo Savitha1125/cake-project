@@ -18,12 +18,12 @@
   transition: 0.3s ease;
 }
 .carousel-indicators [data-bs-target] {
-  width: 10%;              /* same width & height → perfect circle */
+  width: 10%;             
   height: 6px;
-  border-radius: 40%;       /* makes it round */
-  background-color: #141313; /* dark black dots */
+  border-radius: 40%;      
+  background-color: #141313;
   transition: all 0.4s ease; 
-  margin: 0 5px;            /* space between dots */
+  margin: 0 5px;           
   border: none;
   padding: 4px;
   display: inline-block;
