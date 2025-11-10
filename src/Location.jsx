@@ -13,7 +13,7 @@ const navigate = useNavigate();
   
   return (
     <>
-      <div className="location-box " onClick={() => setShowPopup(true)}>
+      <div className="location-box col-md-12 col-sm-12" onClick={() => setShowPopup(true)}>
         <img src={img1} alt="India Flag" className="flag" />
         <span className="country-code">IND</span>
         <div className="vertical-line"></div>

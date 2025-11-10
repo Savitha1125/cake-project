@@ -74,22 +74,12 @@ body{
 }
 .logo img{
   width:5%;
-  margin-top: 25px;
+  margin-top: 21px !important;
   margin-left: 15px;
   cursor: pointer;
 }
-.logo h2{
-  margin-top: -40px;
-  margin-left: 6%;
-  color: #7D2C8B;
-  cursor: pointer;
-}
-.logo p{
-  font-size: 8px;
-  margin-top: -5px;
-  color: #4A4A4A;
-  cursor: pointer;
-}
+
+
 @media (max-width: 768px) {
   .logo img { width: 25%; margin-top: 15px; margin-left: 5px; }
   .logo h2 { font-size: 18px; margin-top: 5px; margin-left: 0; }

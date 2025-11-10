@@ -4,9 +4,9 @@ import SearchBar from "./SearchBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import Detail from './Detail';
-import Carosual from './Carosual';
 
-export default function Page() {
+
+export default function Header() {
   const [showPartnerTooltip, setShowPartnerTooltip] = useState(false);
   const [showCurrencyTooltip, setShowCurrencyTooltip] = useState(false);
   const [selectedCurrency, setSelectedCurrency] = useState('QAR');
@@ -84,7 +84,6 @@ export default function Page() {
 
         <SearchBar/>
         <Detail/>
-        <Carosual/>
       </div>
     </>
   );

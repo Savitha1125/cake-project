@@ -1,13 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./detailpage.css";
 
 export default function Detail() {
   const [activeMenu, setActiveMenu] = useState(null);
+  const [hideOnScroll, setHideOnScroll] = useState(false);
+
+  // Listen to scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) { // adjust threshold as needed
+        setHideOnScroll(true);
+      } else {
+        setHideOnScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="container-fluid detailpage">
       <div className="row text-center align-items-center justify-content-between menu-row">
-        {/* 🔹 Left Menu Items */}
         <div className="menu-left">
           <div className="menu-items active">EXPRESS</div>
 
@@ -17,7 +32,7 @@ export default function Detail() {
             onMouseLeave={() => setActiveMenu(null)}
           >
             CAKES
-            {activeMenu === "cakes" && (
+            {!hideOnScroll && activeMenu === "cakes" && (
               <div
                 className="mega-menu"
                 onMouseEnter={() => setActiveMenu("cakes")}
@@ -30,7 +45,6 @@ export default function Detail() {
                   </p>
                   <p>Midnight Cakes</p>
                 </div>
-
                 <div className="menu-column">
                   <h4>Cakes By Flavour</h4>
                   <p className="me-3 choco">
@@ -38,7 +52,6 @@ export default function Detail() {
                   </p>
                   <p className="me-5 truf">Truffle Cakes</p>
                 </div>
-
                 <div className="menu-column">
                   <h4>Cakes By Theme</h4>
                   <p className="me-5 kids">
@@ -46,8 +59,6 @@ export default function Detail() {
                   </p>
                   <p className="me-4">Unicorn Cakes</p>
                 </div>
-
-                {/* 🔹 Cakes By Occasion + Weight (same column) */}
                 <div className="menu-column">
                   <h4>Cakes By Occasion</h4>
                   <p className="me-5 birth">
@@ -60,10 +71,12 @@ export default function Detail() {
                     <p className="me-4">Cake Combos</p>
                     <p className="ms-2">Cakes And Flowers</p>
                   </div>
-                  </div>
-                  <div className="menu-column-1">
+                </div>
+                <div className="menu-column-1">
                   <h4>Top Trending Links</h4>
-                  <p><span className="menu-separator"></span> Pinata Cakes</p>
+                  <p>
+                    <span className="menu-separator"></span> Pinata Cakes
+                  </p>
                   <p>Pull Me Up Cakes</p>
                 </div>
               </div>
@@ -81,7 +94,7 @@ export default function Detail() {
           <div className="menu-item">OCCASIONS</div>
         </div>
 
-        {/* 🔹 Right Side Delivery Box */}
+        {/* Right Side Delivery Box */}
         <div className="delivery-container">
           <i className="fi fi-rr-motorcycle scooty"></i>
           <span className="delivery-text">2 Hour Delivery Gifts</span>
