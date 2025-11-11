@@ -1,0 +1,149 @@
+
+.container h5 {
+  position: relative;
+  top: 15px;
+  right: 2% !important;
+  font-weight: normal;
+}
+
+.home {
+  position: relative;
+  right: 2%;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.icon {
+  font-size: 7px;
+  margin-left: 8px;
+}
+
+.cakes {
+  position: absolute;
+  left: 5%;
+  top: 1px;
+}
+
+.box {
+  margin-left: 25px;
+  background-color: lch(84.43% 1.09 18.96);
+  padding: 5px 5px 15px 10px;
+  width: 92vw;
+  transform: translateX(-10px);
+  font-weight: bold;
+}
+
+/* Full-page Blur Overlay */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/*  Popup Box */
+.popup-box {
+  position: relative;
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 20px;
+  width: 330px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+/*
+ Close Button */
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #e11d48; /* pinkish-red hover */
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📅 Date Picker Styling */
+.react-datepicker {
+  border: none !important;
+  width: 100%;
+}
+
+.react-datepicker__day:hover {
+  background-color: #f28ab2;
+  color: white;
+}
+
+.react-datepicker__day--selected {
+  background-color: #f28ab2 !important;
+  color: white !important;
+}
+
+/* 🔘 Buttons */
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.reset-btn,
+.ok-btn {
+  border: none;
+  padding: 7px 15px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reset-btn {
+  background-color: #ef4444;
+}
+
+.ok-btn {
+  background-color: #22c55e;
+}
+
+.reset-btn:hover {
+  background-color: #dc2626;
+}
+
+.ok-btn:hover {
+  background-color: #16a34a;
+}

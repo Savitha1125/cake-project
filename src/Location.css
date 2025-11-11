@@ -13,7 +13,7 @@
   width: 360px;
   white-space: nowrap;
   transition: background-color 0.3s ease; 
-  position: fixed !important;
+  position: absolute;
   top: 35px !important;
   left:48%
 }

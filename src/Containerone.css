@@ -1,4 +1,13 @@
-.images{
-      height: 50px;
-      width:30%
+.images img {
+  height: 300px; 
+  width: 30%;
+  object-fit: cover; 
+  display: block;
+  
+}
+
+.containerone h2 {
+  position: relative;
+  top:20px !important;
+  text-align: center;
 }

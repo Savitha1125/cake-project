@@ -1,17 +1,18 @@
 .detailpage {
   background-color: lch(96.41% 1.06 18.87);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   font-family: 'Poppins', sans-serif;
   margin-top: 20px;
   display: flex;
   gap: 45px;
   padding: 15px 20px;
-  width: 100%;
+  width: 99%;
   height: 60px;
   align-items: center;
   justify-content:flex-start; 
   white-space: nowrap; 
   scrollbar-width: none;
-  padding: 15px 50px;
+  padding-right: 40px !important;
   overflow: visible; 
   position: relative; 
   z-index: 10;

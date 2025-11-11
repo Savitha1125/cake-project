@@ -11,14 +11,13 @@ import img6 from "./assets/gifts.avif";
 import img7 from "./assets/personalised.avif";
 import img8 from "./assets/global.webp";
 import './product.css';
-import Carosual from "./Carosual";
 import ContainerOne from "./ContainerOne";
 
 export default function Product() {
   const navigate = useNavigate();  // <-- initialize navigate
 
   const images = [
-  { src: img1, name: "Cakes", link: "/cakepage" },
+  { src: img1, name: "Cakes", link: "/cakes" },
   { src: img2, name: "Flowers", link: "/flowers" },
   { src: img3, name: "Combos", link: "/combos" },
   { src: img4, name: "Plants", link: "/plants" },
@@ -31,7 +30,6 @@ export default function Product() {
 
   return (
     <div>
-  <Carosual />   {/* always at the top of home page */}
   <div className="product-section">
     <Container>
       <div className="product-inline">
