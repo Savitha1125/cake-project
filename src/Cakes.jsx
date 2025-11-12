@@ -104,8 +104,8 @@ export default function Cakes() {
     <div className="separator">
     <p className="filter">SGD</p></div>
       <label>Filter By Price</label> 
-      {/* <h6 className="pro">All Products */}
-       <select id="priceFilter" name="priceFilter">
+    <div className="select-wrapper">
+    <select id="priceFilter" name="priceFilter">
     <option value="All Products">All Products</option>
     <option value="7.34 and Below">7.34 and Below</option>
     <option value="7.35 - 14.69">7.35 - 14.69</option>
@@ -113,10 +113,9 @@ export default function Cakes() {
     <option value="22.05 - 36.74">22.05 - 36.74</option>
     <option value="36.75 and Above">36.75 and Above</option>
   </select>
-  {/* </h6> */}
-        <i className="fi fi-br-angle-small-down dropdown-icon"></i>
-      </div>
-    </div>
+  </div>
+  </div>
+  </div>
     
     </>
   );
