@@ -4,6 +4,7 @@ import VendorForm from "./Vendor";
 import Franchise from "./Franchise";
 import DeliveryLocation from "./Location";
 import Wishlist from "./Wishlist";
+import SearchBar from "./SearchBar";
 import DetailPage from "./Detail";
 import Product from "./Product";
 import CakePage from "./CakePage";
@@ -23,6 +24,7 @@ export default function Router() {
         <>
           <Header />
           <DeliveryLocation />
+          {location.pathname === "/" && <SearchBar />}
         </>
       )}
 
@@ -40,7 +42,7 @@ export default function Router() {
         <Route path="/gifts" element={<div>Gifts Page</div>} />
         <Route path="/personalised" element={<div>Personalised</div>} />
         <Route path="/global" element={<div>Global page</div>} />
-        <Route path="/detail/:id" element={<DetailPage />} />
+        <Route path="/detail" element={<DetailPage />} />
         <Route path="/vendor" element={<VendorForm />} />
         <Route path="/franchise" element={<Franchise />} />
         <Route path="/wishlist" element={<Wishlist />} />

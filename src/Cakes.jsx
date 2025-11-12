@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
+import { IoClose } from "react-icons/io5";
 import "react-datepicker/dist/react-datepicker.css";
 import "./cakes.css";
 
@@ -7,10 +8,19 @@ export default function Cakes() {
   const [showPopup, setShowPopup] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
 
-  const handleDateChange = (date) => {
+   const handleDateChange = (date) => {
     setSelectedDate(date);
-    setShowPopup(false);
   };
+   
+  //   const [priceFilter, setPriceFilter] = useState("All Products");
+  //    const priceRanges = [
+  //   "All Products",
+  //   "7.34 and Below",
+  //   "7.35 - 14.69",
+  //   "14.70 - 22.04",
+  //   "22.05 - 36.74",
+  //   "36.75 and Above",
+  // ];
 
   return (
     <>
@@ -31,7 +41,7 @@ export default function Cakes() {
 
         <div className="content">
           <div className="box">
-            <h5 style={{ marginBottom: "10px" }}>Cakes</h5>
+            <h5 style={{ marginBottom: "10px",marginLeft:"38px" }}>Cakes</h5>
 
             {/* Calendar + Delivery Date text */}
             <div
@@ -41,53 +51,73 @@ export default function Cakes() {
                 alignItems: "center",
                 gap: "8px",
                 cursor: "pointer",
+          
               }}
-              onClick={() => setShowPopup(true)} // whole section clickable
-            >
-              <i className="fi fi-tr-calendar-clock"
-                 style={{ fontSize: "16px", color: "black", cursor: "pointer" }}></i>
-            <span className="delivery-text">Delivery Date</span>
+              onClick={() => setShowPopup(true)} > 
+              <i className="fi fi-tr-calendar-clock cal"
+                 style={{ fontSize: "20px", color: "black", cursor: "pointer",display: "flex",
+                  alignItems: "center",justifyContent: "center",gap: "9px"}}>
+                  <span className="date">Delivery Date</span> <span className="select">Select Delivery Date</span></i> 
+                 <i className="fi fi-br-angle-small-down dropdown-icon "></i>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* ✅ Popup placed OUTSIDE container for full-page blur */}
       {showPopup && (
         <div className="popup-overlay">
           <div className="popup-box">
-            {/* ❌ Close button */}
-            <button
-              className="close-btn"
-              onClick={() => setShowPopup(false)}
-              aria-label="Close"
-            >
-              &times;
-            </button>
+            {/*  Close button */}
+            <button className="close-btn" onClick={() => setShowPopup(false)}>
+  <IoClose size={24} />
+</button>
 
-            <h3>Select Delivery Date</h3>
+<DatePicker
+  selected={selectedDate}
+  onChange={handleDateChange}
+  inline
+  calendarClassName="custom-calendar"
+  minDate={new Date()} // disables all past dates
+/>
 
-            <DatePicker
-              selected={selectedDate}
-              onChange={handleDateChange}
-              inline
-              calendarClassName="custom-calendar"
-            />
+<div className="popup-actions">
+  <button
+    className="reset-btn"
+    onClick={() => {
+      setSelectedDate(null); // clears selected date
+      setShowPopup(false);   // closes popup
+    }}
+  >
+    Reset
+  </button>
 
-            <div className="popup-actions">
-              <button
-                className="reset-btn"
-                onClick={() => setSelectedDate(null)}
-              >
-                Reset
-              </button>
-              <button className="ok-btn" onClick={() => setShowPopup(false)}>
-                OK
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+  <button
+    className="ok-btn"
+    onClick={() => setShowPopup(false)} // closes popup normally
+  >
+    OK
+  </button>
+</div>
+</div>
+</div>
+    )}
+   <div className="filter-section">
+    <div className="separator">
+    <p className="filter">SGD</p></div>
+      <label>Filter By Price</label> 
+      {/* <h6 className="pro">All Products */}
+       <select id="priceFilter" name="priceFilter">
+    <option value="All Products">All Products</option>
+    <option value="7.34 and Below">7.34 and Below</option>
+    <option value="7.35 - 14.69">7.35 - 14.69</option>
+    <option value="14.70 - 22.04">14.70 - 22.04</option>
+    <option value="22.05 - 36.74">22.05 - 36.74</option>
+    <option value="36.75 and Above">36.75 and Above</option>
+  </select>
+  {/* </h6> */}
+        <i className="fi fi-br-angle-small-down dropdown-icon"></i>
+      </div>
+    </div>
+    
     </>
   );
 }
