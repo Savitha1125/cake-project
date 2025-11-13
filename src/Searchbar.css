@@ -200,8 +200,7 @@
     font-size: 13px;
     padding: 5px 10px;
   }
-} */
-/* ================== Right Section ================== */
+} 
 .right-section {
   display: flex;
   align-items: center;
@@ -212,7 +211,6 @@
   z-index: 10;
 }
 
-/* ================== Search Bar ================== */
 .search-bar {
   position: relative;
   width: 350px;
@@ -234,7 +232,7 @@
   border-color: #aaa;
 }
 
-/* Search icon inside input */
+
 .search-bar i {
   position: absolute;
   right: 10px;
@@ -245,7 +243,6 @@
   cursor: pointer;
 }
 
-/* ================== Tooltip Suggestions ================== */
 .search-tooltip {
   position: absolute;
   top: 100%;
@@ -267,7 +264,6 @@
   min-height: 140px;
 }
 
-/* Tooltip header */
 .search-item {
   font-weight: normal;
   margin-bottom: 8px;
@@ -282,7 +278,7 @@
   background-color: #ccc;
 }
 
-/* ================== Shortcut Suggestions ================== */
+
 .sub-menu,
 .sub-menu1,
 .sub-menu2,
@@ -312,7 +308,6 @@
   cursor: pointer;
 }
 
-/* Positioning shortcuts */
 .sub-menu { top: 45px; left: 5%; }
 .sub-menu1 { top: 45px; left: 32%; }
 .sub-menu2 { top: 45px; left: 63%; }
@@ -322,7 +317,7 @@
 .sub-menu3 { top: 105px; left: 5%; }
 .sub-menu001 { top: 105px; left: 43%; }
 
-/* ================== Bold text inside search */
+
 .text {
   font-weight: bold;
 }

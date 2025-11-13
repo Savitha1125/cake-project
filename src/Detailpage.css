@@ -17,6 +17,13 @@
   position: relative; 
   z-index: 10;
 }
+.detailpage.show {
+  transform: translateY(0);  /* visible */
+}
+
+.detailpage.hide {
+  transform: translateY(-100%); /* hidden */
+}
 .menu-items{
   font-weight: 500;
   font-size: 13px;

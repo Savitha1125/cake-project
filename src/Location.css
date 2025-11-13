@@ -1,9 +1,4 @@
-.location-box {
-  display: flex;
-  align-items: center;
-  float: right;
-  background: linear-gradient(to right, #f8d9e6, #e3effd) !important;
-  /* border: 5px solid #f0f0f0; */
+/* .location-box {
   border-radius: 6px;
   padding: 14px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -37,7 +32,7 @@
   justify-content: center;
   align-items: center;
   z-index: 99;
-  /* backdrop-filter: blur(2px); */
+  
 }
 
 .popup-box {
@@ -56,9 +51,6 @@
 }
 
 .popup-header {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
   text-align: center;
   white-space: nowrap;
   margin-top: 15px;
@@ -77,9 +69,8 @@
   cursor: pointer;
   position: absolute;
   top: 2px;
-  /* left: 40%;  */
-  background: none; /* no background */
-  color: #555;      /* simple dark gray X */
+  background: none; 
+  color: #555;      
   font-weight: bold;
   width:80%;
 }
@@ -95,7 +86,6 @@
 .vertical-line{
   border-left: 1px solid #656363;
   height: 4px;                
-  /* margin: 0 10px;  */
 }
 .popup-subtitle {
   text-align: center;
@@ -175,8 +165,8 @@ input[type="radio"]  {
 .continue-btn:hover,
 .continue-btn:focus,
 .continue-btn:active {
-  background: #ccc; /* keep same background */
-  color: #333 !important; /* keep same text color */
+  background: #ccc; 
+  color: #333 !important; 
   outline: none !important;
   box-shadow: none !important;
 }
@@ -197,8 +187,6 @@ input[type="radio"]  {
   margin-right: -9%;
   display: inline-block;
 }
-
-/* Tooltip box design */
 .tooltip-user-box{
   position: absolute;
   top: 80%;           
@@ -254,7 +242,6 @@ input[type="radio"]  {
   align-items: center;
   float: right;
   background: linear-gradient(to right, #f8d9e6, #e3effd) !important;
-  /* border: 5px solid #f0f0f0; */
   border-radius: 6px;
   padding: 14px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
@@ -288,7 +275,6 @@ input[type="radio"]  {
   justify-content: center;
   align-items: center;
   z-index: 99;
-  /* backdrop-filter: blur(2px); */
 }
 
 .popup-box {
@@ -325,9 +311,8 @@ input[type="radio"]  {
   cursor: pointer;
   position: absolute;
   top: 2px;
-  /* left: 40%;  */
-  background: none; /* no background */
-  color: #555;      /* simple dark gray X */
+  background: none; 
+  color: #555;      
   font-weight: bold;
   width:80%;
 }
@@ -343,7 +328,6 @@ input[type="radio"]  {
 .vertical-line{
   border-left: 1px solid #656363;
   height: 4px;                
-  /* margin: 0 10px;  */
 }
 .popup-subtitle {
   text-align: center;
@@ -381,7 +365,7 @@ input[type="radio"]  {
   font-size: 18px;
   color: #333;
   position: relative;
-  top: 0; /* reset — don’t move text alone */
+  top: 0; 
 }
 
 
@@ -443,8 +427,8 @@ input[type="radio"]  {
 .continue-btn:hover,
 .continue-btn:focus,
 .continue-btn:active {
-  background: #ccc; /* keep same background */
-  color: #333 !important; /* keep same text color */
+  background: #ccc; 
+  color: #333 !important; 
   outline: none !important;
   box-shadow: none !important;
 }
@@ -466,7 +450,6 @@ input[type="radio"]  {
   display: inline-block;
 }
 
-/* Tooltip box design */
 .tooltip-user-box{
   position: absolute;
   top: 80%;           
@@ -610,7 +593,7 @@ input[type="radio"]  {
     width: 150px;
   }
 } 
- /* @media (max-width: 600px) {
+ @media (max-width: 600px) {
   .location-box {
     flex-direction: column;
     align-items: center;
@@ -640,4 +623,4 @@ input[type="radio"]  {
     top: 40px;
     width: 150px;
   }
-} */
+} 

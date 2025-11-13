@@ -19,7 +19,7 @@ export default function Carosual() {
   ];
 
   return (
-    <div className="carousel-wrapper">
+    <div className="carousel-wrapper" >
       <Carousel
         interval={2000}
         controls={true}
