@@ -12,7 +12,7 @@ import Cakes from "./Cakes";
 import FlowersPage from "./Flowerspage";
 import Carosual from "./Carosual"; // import carousel
 
-export default function Router() {
+export default function MainLayout() {
   const location = useLocation();
   const hideHeaderRoutes = ["/vendor", "/franchise"];
   const shouldHideHeader = hideHeaderRoutes.includes(location.pathname);

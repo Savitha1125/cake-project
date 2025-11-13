@@ -41,7 +41,7 @@
   text-transform: capitalize;
 }
 
-/* 💻 Laptop — 4 per row */
+/*  Laptop — 4 per row */
 @media (max-width: 992px) {
   .product-inline {
     grid-template-columns: repeat(4, 1fr);
@@ -53,7 +53,7 @@
   }
 }
 
-/* 📱 Tablet — 2 per row */
+/*  Tablet — 2 per row */
 @media (max-width: 768px) {
   .product-inline {
     grid-template-columns: repeat(2, 1fr);
@@ -68,7 +68,7 @@
   }
 }
 
-/* 📞 Mobile — still 2 per row (not 1) */
+/*  Mobile — still 2 per row (not 1) */
 @media (max-width: 480px) {
   .product-inline {
     grid-template-columns: repeat(2, 1fr);

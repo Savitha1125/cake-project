@@ -1,13 +1,60 @@
-.images img {
-  height: 300px; 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* keep top alignment */
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px; /* push the whole row down */
+}
+
+.containerone {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.containerone h2 {
+  margin-top: 40px;   /* 👈 moves heading slightly down */
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  top: 10px;           /* 👈 extra fine adjustment downwards */
+}
+
+/*  common style for all image boxes */
+.images, 
+.discount, 
+.rose {
   width: 30%;
-  object-fit: cover; 
-  display: block;
+}
+
+/*  move all 3 images slightly down */
+.images img,
+.discount img,
+.rose img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 30px; 
   
 }
 
-.containerone h2 {
-  position: relative;
-  top:20px !important;
-  text-align: center;
+.discount img {
+  height: 370px;
+}
+
+/* responsive for mobile */
+@media (max-width: 768px) {
+  .images, 
+  .discount, 
+  .rose {
+    width: 90%;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }

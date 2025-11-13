@@ -1,5 +1,4 @@
-
- .location-box {
+.location-box {
   display: flex;
   align-items: center;
   float: right;
@@ -294,7 +293,7 @@ input[type="radio"]  {
 
 .popup-box {
   background: #fff;
-  width: 50%;
+  width: 50% !important;
   border-radius: 19px;
   padding: 40px 30px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
@@ -308,9 +307,6 @@ input[type="radio"]  {
 }
 
 .popup-header {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
   text-align: center;
   white-space: nowrap;
   margin-top: 15px;
@@ -354,22 +350,41 @@ input[type="radio"]  {
   font-size: 18px;
   color: #555;
   margin: 10px 0 20px;
-  margin-top: 45px;
+  margin-top: 30px !important;
   font-weight: normal;
 }
-
 .radio-group {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 60px;
+  margin-top: 20px;
 }
-input[type="radio"]  {
-      accent-color: green;
+
+.location-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  top: 46px;  
 }
-.radio-group input[type="radio"]{
-      padding: 15px;
+
+.location-option input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: rgb(5, 79, 5);
+  cursor: pointer;
 }
+
+.within {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  position: relative;
+  top: 0; /* reset — don’t move text alone */
+}
+
+
 .search-section {
   display: flex;
   align-items: center;
@@ -387,6 +402,7 @@ input[type="radio"]  {
   flex: 1;
   background: transparent;
   padding: 5px;
+  font-weight: bold;
 }
 
 .links {
@@ -562,7 +578,7 @@ input[type="radio"]  {
   box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
   z-index: 9999;
 }
-/* Responsive header layout */
+
 @media (max-width: 600px) {
   .location-box {
     flex-direction: column;
@@ -572,7 +588,7 @@ input[type="radio"]  {
   }
 
   .choose-text {
-    display: none; /* hide long text to save space */
+    display: none; 
   }
 
   .flag, .country-code {
@@ -593,4 +609,35 @@ input[type="radio"]  {
     top: 40px;
     width: 150px;
   }
-}
+} 
+ /* @media (max-width: 600px) {
+  .location-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+
+  .choose-text {
+    display: none; 
+  }
+
+  .flag, .country-code {
+    transform: scale(0.9);
+  }
+
+  .icons-right {
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .icon-user, .icon-heart, .icon2 {
+    font-size: 20px;
+  }
+
+  .tooltip-user-box {
+    top: 40px;
+    width: 150px;
+  }
+} */

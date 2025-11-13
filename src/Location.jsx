@@ -4,13 +4,14 @@ import img1 from './assets/in.png';
 import './Location.css'
 import { useNavigate } from "react-router-dom";
 
-export default function DeliveryLocation() {
+export default function Location() {
   const [showPopup, setShowPopup] = useState(false);
   const [showTooltip,setShowTooltip]=useState(false);
   const [showWishlist, setShowWishlist] = useState(false);
   const [showCart, setShowCart] = useState(false);
 const navigate = useNavigate();
-  
+  const [isFocused, setIsFocused] = useState(false);
+
   return (
     <>
       <div className="location-box col-md-12 col-sm" onClick={() => setShowPopup(true)}>
@@ -39,31 +40,42 @@ const navigate = useNavigate();
               Select a delivery location to see product availability
             </h4>
 
-            <div className="radio-group">
-              <label>
-                <input type="radio" name="location" defaultChecked />
-               <span style={{marginLeft:"10px",fontWeight:"bold"}}>Within India</span> 
-              </label>
-              <label>
-                <input type="radio" name="location" />
-                <span style={{marginLeft:"10px"}}>Outside India</span>
-              </label>
-            </div>
+           <div className="radio-group">
+  <div className="location-option">
+    <label>
+      <input type="radio" name="location" defaultChecked />
+      <span className="within">Within India</span>
+    </label>
+  </div>
 
-            <div className="search-section">
-              <i className="fa-solid fa-location-dot"></i>
-              <input
-                type="text"
-                placeholder="Enter Delivery Area or Pincode"
-              />
-              <i className="fa-solid fa-magnifying-glass"></i>
-            </div>
+  <div className="location-option">
+    <label>
+      <input type="radio" name="location" />
+      <span className="within">Outside India</span>
+    </label>
+  </div>
+</div>
+
+          <div className="search-section" onClick={() => setIsFocused(true)}>
+      <i className="fa-solid fa-location-dot"></i>
+      <input
+        type="text"
+        placeholder={
+          isFocused
+            ? "Enter Pincode"
+            : "Enter Delivery Area or Pincode"
+        }
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
+      />
+      <i className="fa-solid fa-magnifying-glass"></i>
+    </div>
 
             <div className="links">
               <a href="#">Don’t Know Pincode?</a>
               <i
                 className="fi fi-rs-location-crosshairs"
-                style={{ color: "#80c2f1", marginRight: "-30%", marginTop: "3px" }}
+                style={{ color: "#80c2f1", marginRight: "-26%", marginTop: "3px" }}
               ></i>
               <span style={{ color: "#80c2f1" }}>Detect my Location</span>
             </div>
@@ -94,7 +106,7 @@ const navigate = useNavigate();
                 My Orders<br/>
                 My Address Book<br/>
                 My Wallet<br/>
-                My Reminder</p>
+               </p>
           </div>
         )}
         </div>

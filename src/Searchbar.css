@@ -1,4 +1,4 @@
-
+/* 
 .right-section {
   display: flex;
   align-items: center;
@@ -165,7 +165,7 @@
   }
 }
 
-/* Mobile */
+
 @media (max-width: 600px) {
   .search-bar {
     width: 95%;
@@ -200,4 +200,215 @@
     font-size: 13px;
     padding: 5px 10px;
   }
+} */
+/* ================== Right Section ================== */
+.right-section {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 37px;
+  left: 18%;
+  gap: 15px;
+  z-index: 10;
 }
+
+/* ================== Search Bar ================== */
+.search-bar {
+  position: relative;
+  width: 350px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  outline: none;
+  background-color: #edebeb;
+  transition: all 0.2s ease;
+}
+
+.search-bar input:focus {
+  background-color: #fff;
+  border-color: #aaa;
+}
+
+/* Search icon inside input */
+.search-bar i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* ================== Tooltip Suggestions ================== */
+.search-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #333;
+  padding: 8px 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  font-size: 13px;
+  white-space: normal;
+  text-align: left;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 350px;
+  border-radius: 6px;
+  min-height: 140px;
+}
+
+/* Tooltip header */
+.search-item {
+  font-weight: normal;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.search-item::after {
+  content: "";
+  flex: 1;
+  margin-left: 10px;
+  height: 1px;
+  background-color: #ccc;
+}
+
+/* ================== Shortcut Suggestions ================== */
+.sub-menu,
+.sub-menu1,
+.sub-menu2,
+.sub-menu00,
+.sub-menu01,
+.sub-menu02,
+.sub-menu3,
+.sub-menu001 {
+  position: absolute;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.sub-menu:hover,
+.sub-menu1:hover,
+.sub-menu2:hover,
+.sub-menu00:hover,
+.sub-menu001:hover,
+.sub-menu02:hover,
+.sub-menu01:hover,
+.sub-menu3:hover {
+  border-color: pink;
+  background-color: #fcf0f8;
+  cursor: pointer;
+}
+
+/* Positioning shortcuts */
+.sub-menu { top: 45px; left: 5%; }
+.sub-menu1 { top: 45px; left: 32%; }
+.sub-menu2 { top: 45px; left: 63%; }
+.sub-menu00 { top: 75px; left: 5%; }
+.sub-menu01 { top: 75px; left: 32%; }
+.sub-menu02 { top: 75px; left: 63%; }
+.sub-menu3 { top: 105px; left: 5%; }
+.sub-menu001 { top: 105px; left: 43%; }
+
+/* ================== Bold text inside search */
+.text {
+  font-weight: bold;
+}
+
+@media (max-width: 992px) {
+  .search-bar {
+    width: 80%;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .search-bar i {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .search-bar {
+    width: 95%;
+    padding: 6px 12px;
+    border-radius: 25px;
+  }
+  .text {
+    font-size: 13px;
+  }
+  .search-bar i {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .search-tooltip {
+    top: 105%;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  .sub-menu,
+  .sub-menu1,
+  .sub-menu2,
+  .sub-menu00,
+  .sub-menu01,
+  .sub-menu02,
+  .sub-menu3,
+  .sub-menu001 {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+}
+/* @media (max-width: 992px) {
+  .search-bar {
+    width: 80%;
+  }
+  .text {
+    font-size: 14px;
+  }
+  .search-bar i {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .search-bar {
+    width: 95%;
+    padding: 6px 12px;
+    border-radius: 25px;
+  }
+  .text {
+    font-size: 13px;
+  }
+  .search-bar i {
+    font-size: 16px;
+    margin-left: 5px;
+  }
+  .search-tooltip {
+    top: 105%;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+  }
+  .sub-menu,
+  .sub-menu1,
+  .sub-menu2,
+  .sub-menu00,
+  .sub-menu01,
+  .sub-menu02,
+  .sub-menu3,
+  .sub-menu001 {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+} */
