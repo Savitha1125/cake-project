@@ -54,6 +54,13 @@ export default function Detail() {
 
           <div className="menu-item">FLOWERS</div>
           <div className="menu-item">PLANTS</div>
+          <div className="menu-item">GIFTS</div>
+          <div className="menu-item">PERSONALIZED GIFTS</div>
+          <div className="menu-item">CHOCOLATES</div>
+          <div className="menu-item">COMBOS</div>
+          <div className="menu-item">BIRTHDAY</div>
+          <div className="menu-item">ANNIVERSARY</div>
+          <div className="menu-item">OCCASSIONS</div>
         </div>
 
         <div className="delivery-container">

@@ -93,7 +93,7 @@ body{
   .logo h2 { font-size: 18px; margin-top: 5px; margin-left: 0; }
   .logo p { font-size: 10px; margin-top: 0; }
 } */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .logo img { 
     width: 25%; 
     margin-top: 15px; 
@@ -108,7 +108,7 @@ body{
     font-size: 10px; 
     margin-top: 0; 
   }
-}
+} */
 /* searchbar */
 
 * /*================== Right Section ================== */
@@ -125,7 +125,7 @@ body{
 /* ================== Search Bar ================== */
 .search-bar {
   position: relative;
-  width: 350px;
+  width: 390px;
 }
 
 .search-bar input {
@@ -237,7 +237,7 @@ body{
   font-weight: bold;
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .search-bar {
     width: 80%;
   }
@@ -279,7 +279,7 @@ body{
     font-size: 13px;
     padding: 5px 10px;
   }
-}
+} */
 
 /* locationbox */
 .location-box {
@@ -292,12 +292,12 @@ body{
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
   gap: 8px;
   font-size: 14px;
-  width: 30%;
+  width: 25%;
   white-space: nowrap;
   transition: background-color 0.3s ease; 
   position: absolute;
   top: 34px;
-  right: 24%;
+  right: 27%;
 }
 .flag{
   width:10%;
@@ -607,7 +607,7 @@ body{
   z-index: 9999;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .location-box {
     flex-direction: column;
     align-items: center;
@@ -668,4 +668,4 @@ body{
     top: 40px;
     width: 150px;
   }
-} 
+}  */

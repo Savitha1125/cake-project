@@ -35,7 +35,7 @@ export default function Header() {
 
   return (
     <>
-    <div className='header-top'>
+    <div className='header-top col-md-12 col-sm-12'>
       <div className="detail d-flex justify-content-end gap-3">
         <div>Help |</div>
 
