@@ -19,9 +19,9 @@
   height: 40px;
 }
 .carousel-indicators [data-bs-target] {
-  width: 10%;             
-  height: 6px;
-  border-radius: 40%;      
+  width: 7px;             
+  height: 1px;
+  border-radius: 50%;      
   background-color: #141313;
   transition: all 0.4s ease; 
   margin: 0 5px;           
@@ -34,16 +34,17 @@
 /* 🔘 Active dot → white */
 .carousel-indicators .active {
   background-color: #fff;     
-  width: 35px;        
-  height: 10px;       
-  border-radius: 20px; 
+  width:100% !important;         
+  height:2px;       
+  border-radius: 20px / 65px; 
   transition: all 0.4s ease; 
+  
 }
  .carousel-indicators {
   background: rgba(128, 128, 128, 0.8);
   border-radius: 20px;
   padding: 5px 16px;
-  width: 6%;
+  width: 75px;
   margin: auto;
   margin-bottom: 12px;
 }

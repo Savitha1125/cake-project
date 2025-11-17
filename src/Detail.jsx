@@ -25,8 +25,8 @@ export default function Detail() {
   }, [lastScrollY]);
 
   return (
-    <div className={`container-fluid detailpage ${visible ? "show" : "hide"}`}>
-      <div className="row text-center align-items-center justify-content-between menu-row">
+    <div className="container-fluid detailpage">
+      <div className="menu-row">
         <div className="menu-left">
           <div className="menu-items active">EXPRESS</div>
 
@@ -36,22 +36,56 @@ export default function Detail() {
             onMouseLeave={() => setActiveMenu(null)}
           >
             CAKES
-            {activeMenu === "cakes" && (
-              <div className="mega-menu">
-                <div className="menu-column">
-                  <h4>Cakes By Type</h4>
-                  <p>Eggless Cakes</p>
-                  <p>Midnight Cakes</p>
-                </div>
-                <div className="menu-column">
-                  <h4>Cakes By Flavour</h4>
-                  <p>Chocolate Cakes</p>
-                  <p>Truffle Cakes</p>
-                </div>
-              </div>
-            )}
-          </div>
+          {activeMenu === "cakes" && (
+  <div className="mega-menu">
 
+    {/* Cakes By Type */}
+    <div className="menu-column">
+      <h4>Cakes By Type</h4>
+      <p className="menu-separator egg">Eggless Cakes</p>
+      <p>Midnight Cakes</p>
+    </div>
+
+    {/* Cakes By Flavour */}
+    <div className="menu-column">
+      <h4 className="yellow-strip">Cakes By Flavour</h4>
+      <p className="menu-separator choco">Chocolate Cakes</p>
+      <p className="truffle ms-2">Truffle Cakes</p>
+    </div>
+
+    {/* Cakes By Theme */}
+    <div className="menu-column">
+      <h4 className="yellow-strip">Cakes By Theme</h4>
+      <p className="menu-separator kids">Kids Cakes</p>
+      <p>Unicorn Cakes</p>
+    </div>
+
+    {/* Cakes By Occasion */}
+    <div className="menu-column">
+      <h4 className="yellow-strip">Cakes By Occasion</h4>
+      <p className="birth ms-1 menu-separator">Birthday Cakes</p>
+      <p>Anniversary Cakes</p>
+      
+      <div className="sub-section">
+      <h4>Cake Combos</h4>
+      <p className="menu-separator">Cake Combos</p>
+      <p>Cakes And Flowers</p>
+    </div>
+    </div>
+
+    {/* Top Trending Links */}
+    <div className="menu-column-1">
+      <h4 className="menu-left">Top Trending Links</h4>
+      <p className="menu-separator">Pinata Cakes</p>
+      <p>Pull Me Up Cakes</p>
+     <div className="sub-section">
+      <h4>All Cakes</h4>
+      <h4>Best Seller Cakes</h4>
+    </div>
+    </div>
+  </div>
+)}
+          </div>
           <div className="menu-item">FLOWERS</div>
           <div className="menu-item">PLANTS</div>
           <div className="menu-item">GIFTS</div>

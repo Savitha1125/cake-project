@@ -17,13 +17,7 @@
   position: relative; 
   z-index: 10;
 }
-.detailpage.show {
-  transform: translateY(0);  /* visible */
-}
 
-.detailpage.hide {
-  transform: translateY(-100%); /* hidden */
-}
 .menu-items{
   font-weight: 500;
   font-size: 13px;
@@ -111,7 +105,7 @@
   font-weight: 600;
   font-size: 14px;
 }
-/* ✅ Mega Menu Styles */
+
 .mega-menu {
   position: absolute;
   top: 100%;
@@ -131,7 +125,7 @@
 }
 
 .menu-column {
-  width: 30%;
+  width: 20%;
 }
 
 .menu-column h4 {
@@ -144,7 +138,7 @@
 .menu-column p {
   font-size: 13px;
   color: #333;
-  margin: 10px 0;
+  /* margin: 10px 0; */
   cursor: pointer;
   transition: color 0.3s ease;
 }
@@ -181,12 +175,11 @@
   background-color: rgb(243, 134, 56); 
   width: 4px;               
   height: 14px;          
-  margin-right: 12px;            
+  margin-right: 12px !important;            
   vertical-align: middle;   
   position: relative;
   bottom: 2px;
 }
-/* ✅ Sub-section for Cakes by Weight */
 .sub-section {
   margin-top: 10px;
   padding-top: 8px;
@@ -213,7 +206,7 @@
 }
 .menu-column-1 {
   width: 22%;
-  padding-left: 25px; 
+  padding-left: 55px; 
   position: relative;
   margin-left: 20px;
 }
@@ -238,10 +231,11 @@
   color: #444;
   margin: 4px 0;
 }
+
 @media (max-width: 768px) {
   .menu-left .menu-item,
   .menu-left .menu-items,
   .delivery-container {
-    display: none !important; /* hide text menu items */
+    display: none !important; 
   }
 }

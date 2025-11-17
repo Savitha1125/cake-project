@@ -35,7 +35,7 @@ export default function Header() {
 
   return (
     <>
-    <div className='header-top col-md-12 col-sm-12'>
+    <div className='header-top container-fluid'>
       <div className="detail d-flex justify-content-end gap-3">
         <div>Help |</div>
 
@@ -167,7 +167,7 @@ export default function Header() {
     
       <div className="location-option">
         <label>
-          <input type="radio" name="location" />
+          <input type="radio" name="location" className='ratio' />
           <span className="within">Outside India</span>
         </label>
       </div>

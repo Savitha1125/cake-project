@@ -172,7 +172,7 @@ body{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-width: 350px;
+  min-width: 384px;
   border-radius: 6px;
   min-height: 140px;
 }
@@ -237,7 +237,7 @@ body{
   font-weight: bold;
 }
 
-/* @media (max-width: 992px) {
+ @media (max-width: 992px) {
   .search-bar {
     width: 80%;
   }
@@ -279,7 +279,7 @@ body{
     font-size: 13px;
     padding: 5px 10px;
   }
-} */
+} 
 
 /* locationbox */
 .location-box {
@@ -352,14 +352,13 @@ body{
 
 .close-btn {
   border: none;
-  font-size: 22px;
+  font-size: 20px !important;
   cursor: pointer;
-  position: absolute;
-  top: 2px;
-  background: none; 
+  position: relative;
+  top: 5% !important;
+  left: 90% !important;
   color: #555;      
   font-weight: bold;
-  width:80%;
 }
 .close-btn:hover,
 .close-btn:focus,
@@ -387,15 +386,15 @@ body{
   justify-content: center;
   align-items: center;
   gap: 60px;
-  margin-top: 20px;
+  margin-top: 70px;
 }
 
 .location-option {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 90% !important;
   position: relative;
-  top: -4px;  
+  left: 20px;
 }
 
 .location-option input[type="radio"] {
@@ -410,8 +409,9 @@ body{
   font-size: 18px;
   color: #333;
   position: relative;
-  top: 0; 
+  left: 10px;
 }
+
 
 
 .search-section {
@@ -607,9 +607,9 @@ body{
   z-index: 9999;
 }
 
-/* @media (max-width: 600px) {
+@media (max-width: 769px) {
   .location-box {
-    flex-direction: column;
+    flex-direction: column !important;
     align-items: center;
     text-align: center;
     gap: 6px;
@@ -668,4 +668,4 @@ body{
     top: 40px;
     width: 150px;
   }
-}  */
+}  
