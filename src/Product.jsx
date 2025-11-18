@@ -14,7 +14,7 @@ import './product.css';
 import ContainerOne from "./ContainerOne";
 
 export default function Product() {
-  const navigate = useNavigate();  // <-- initialize navigate
+  const navigate = useNavigate();  
 
   const images = [
   { src: img1, name: "Cakes", link: "/cakes" },

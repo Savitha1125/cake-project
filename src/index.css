@@ -14,6 +14,13 @@ body{
  .detail {
   font-size: 14px;
 }
+@media (max-width: 769px) {
+  .detail {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
 
 .tooltip-container {
   position: relative;
@@ -86,29 +93,22 @@ body{
   margin-left: 15px;
   cursor: pointer;
 }
+@media (max-width: 769px) {
 
+  .header-top {
+    height: 80px !important;
+  }
 
-/* @media (max-width: 768px) {
-  .logo img { width: 25%; margin-top: 15px; margin-left: 5px; }
-  .logo h2 { font-size: 18px; margin-top: 5px; margin-left: 0; }
-  .logo p { font-size: 10px; margin-top: 0; }
-} */
-/* @media (max-width: 768px) {
-  .logo img { 
-    width: 25%; 
-    margin-top: 15px; 
-    margin-left: 5px; 
+  .logo img {
+    width: 120px !important;   
+    position: relative !important;
+    bottom: 50px;
+    left: 60%;
+    z-index: 9999 !important; 
   }
-  .logo h2 { 
-    font-size: 18px; 
-    margin-top: 5px; 
-    margin-left: 0; 
-  }
-  .logo p { 
-    font-size: 10px; 
-    margin-top: 0; 
-  }
-} */
+
+}
+
 /* searchbar */
 
 * /*================== Right Section ================== */
@@ -116,7 +116,7 @@ body{
   display: flex;
   align-items: center;
   position: absolute;
-  top: 37px;
+  top: 39px;
   left: 18%;
   gap: 15px;
   z-index: 10;
@@ -237,9 +237,10 @@ body{
   font-weight: bold;
 }
 
- @media (max-width: 992px) {
+@media (max-width: 992px) {
   .search-bar {
     width: 80%;
+    bottom: 30px;
   }
   .text {
     font-size: 14px;
@@ -251,9 +252,11 @@ body{
 
 @media (max-width: 600px) {
   .search-bar {
-    width: 95%;
-    padding: 6px 12px;
+    width: 80%;
+    padding: 5px 12px;
     border-radius: 25px;
+    bottom:70px;
+    right: 58px;
   }
   .text {
     font-size: 13px;
@@ -261,6 +264,13 @@ body{
   .search-bar i {
     font-size: 16px;
     margin-left: 5px;
+    right: 29%;
+  }
+  .search-bar input{
+    width: 75%;
+    border: 1px solid black;
+    border-radius: 5px;
+    
   }
   .search-tooltip {
     top: 105%;
@@ -268,6 +278,7 @@ body{
     overflow-y: auto;
     padding: 10px;
   }
+
   .sub-menu,
   .sub-menu1,
   .sub-menu2,
@@ -279,7 +290,7 @@ body{
     font-size: 13px;
     padding: 5px 10px;
   }
-} 
+}  
 
 /* locationbox */
 .location-box {
@@ -296,8 +307,8 @@ body{
   white-space: nowrap;
   transition: background-color 0.3s ease; 
   position: absolute;
-  top: 34px;
-  right: 27%;
+  top: 35px !important;
+  right: 24%;
 }
 .flag{
   width:10%;
@@ -341,10 +352,7 @@ body{
   text-align: center;
   white-space: nowrap;
   margin-top: 15px;
-  
-  
 }
-
 .popup-header h1 {
   font-size: 25px;
   font-weight: bold;
@@ -556,7 +564,7 @@ body{
   position: absolute;
   font-size: 13px;
   top: 75px;
-  width:32%;
+  width:34%;
   color: rgb(236, 89, 155) !important;
   border-radius: 0%;
 }
@@ -612,7 +620,8 @@ body{
     flex-direction: column !important;
     align-items: center;
     text-align: center;
-    gap: 6px;
+    gap: 8px;
+    width: 100%;
   }
 
   .choose-text {
@@ -638,34 +647,53 @@ body{
     width: 150px;
   }
 } 
- @media (max-width: 600px) {
+@media (max-width: 769px) {
+
   .location-box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 6px;
+    width: 68% !important;        
+    left: 37% !important;
+    transform: translateX(-50%);
+    top: 69px !important;
+    flex-direction: row !important;
+    justify-content: center;
+    padding: 8px 25px;              
+    gap: 16px;                     
+    position: absolute !important;
+    border: 1px solid black;
+    right:10%;
   }
 
   .choose-text {
-    display: none; 
+    display: inline-block !important;
+    font-size: 14px;
+    font-weight: 600;
   }
 
-  .flag, .country-code {
-    transform: scale(0.9);
+  .pencil {
+    margin-right: 30px !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .location-box {
+    justify-content: space-between !important;
+    gap:5px
+  }
+  .pencil {
+    position: relative;
+  }
+}
+@media (max-width: 769px) {
+
+  .right-section {
+    left: 0 !important;
+    top: 140px !important;    
+    width: 100% !important;
+    justify-content: center;
+    position: absolute !important;
   }
 
   .icons-right {
-    justify-content: center;
-    width: 100%;
-    gap: 15px;
+    display: none;
   }
+}
 
-  .icon-user, .icon-heart, .icon2 {
-    font-size: 20px;
-  }
-
-  .tooltip-user-box {
-    top: 40px;
-    width: 150px;
-  }
-}  

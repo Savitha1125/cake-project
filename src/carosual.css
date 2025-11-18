@@ -9,14 +9,15 @@
   background-position: center;
 }
 .custom-arrow {
-  font-size: 30px;
+  font-size: 20px;
   color: #000000; 
   background-color: rgba(255, 255, 255, 0.8); 
-  border-radius: 40px !important;
+  border-radius: 50px !important;
   padding: 13px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   transition: 0.3s ease;
   height: 40px;
+  width: 20%;
 }
 .carousel-indicators [data-bs-target] {
   width: 7px;             
@@ -31,7 +32,7 @@
   vertical-align: middle;
 }
 
-/* 🔘 Active dot → white */
+/*  Active dot → white */
 .carousel-indicators .active {
   background-color: #fff;     
   width:100% !important;         

@@ -25,8 +25,8 @@ export default function Carosual() {
         controls={true}
         indicators={true}
         pause={false}
-        prevIcon={<i className="fa-solid fa-chevron-left custom-arrow"></i>}
-        nextIcon={<i className="fa-solid fa-chevron-right custom-arrow"></i>}
+        prevIcon={<i className="fa-solid fa-chevron-left custom-arrow "></i>}
+        nextIcon={<i className="fa-solid fa-chevron-right custom-arrow "></i>}
       >
         {slides.map((slide, index) => (
           <Carousel.Item key={index}>

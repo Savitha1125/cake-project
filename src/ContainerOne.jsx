@@ -11,6 +11,7 @@ import "./Containerone.css";
 
 export default function ContainerOne() {
   return (
+    <>
     <div className="containerone">
   <h1 className='mt-5 text-center'>Must Have</h1>
 
@@ -28,5 +29,7 @@ export default function ContainerOne() {
   <div className='image-block small'><img src={img7} alt="Accessories"/></div>
 </div>
 </div>
+<div className='container'></div>
+</>
   );
 }

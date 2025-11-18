@@ -36,7 +36,7 @@ export default function Header() {
   return (
     <>
     <div className='header-top container-fluid'>
-      <div className="detail d-flex justify-content-end gap-3">
+      <div className="detail d-flex justify-content-end gap-3 ">
         <div>Help |</div>
 
         {/* Currency Tooltip */}
@@ -95,54 +95,56 @@ export default function Header() {
         <div className="me-5">Track Order</div>
       </div>
 
-      <div className="header-second">
+      <div className="header-second d-flex flex-wrap align-items-center">
         <div className="logo">
           <img src="https://assets.winni.in/groot/2023/03/09/winni-logo/svgtopng-full-cp.png" alt="winni" style={{ height: "34px",
              marginTop: "33px", width: "144px", marginLeft: "30px",cursor:"pointer" }} 
              onClick={()=>window.location.href="/"}/>
         </div>
         {/* SearchBox */}
-            <div className="right-section">
-      <div className="search-bar">
-        <input
-          className="text"
-          type="text"
-          placeholder="Search 5000+ flowers, cakes, gifts etc"
-          onFocus={() => setShowSuggestions(true)}
-          onBlur={() => setShowSuggestions(false)}
-        />
-        <i className="fi fi-br-search"></i>
+ <div className="d-flex flex-column flex-md-row align-items-center justify-content-between col-12 col-md-4 ms-5 mt-3">
+  
+  <div className="search-bar flex-grow-1 me-md-3 w-100 w-md-50">
+    <input
+      className="text"
+      type="text"
+      placeholder="Search 5000+ flowers, cakes, gifts etc"
+      onFocus={() => setShowSuggestions(true)}
+      onBlur={() => setShowSuggestions(false)}
+    />
+    <i className="fi fi-br-search"></i>
 
-        {showSuggestions && (
-          <div className="search-tooltip">
-            <h6 className="search-item">
-              Trending Shortcut
-              <hr />
-            </h6>
-            <div className="sub-menu">Cakes</div>
-            <div className="sub-menu1">Flowers</div>
-            <div className="sub-menu2">Gifts</div>
-            <div className="sub-menu00">Combos</div>
-            <div className="sub-menu01">Chocolates</div>
-            <div className="sub-menu02">Birthday Gifts</div>
-            <div className="sub-menu3">Personalized Gifts</div>
-            <div className="sub-menu001">Anniversary Gifts</div>
-          </div>
-        )}
+    {showSuggestions && (
+      <div className="search-tooltip">
+        <h6 className="search-item">
+          Trending Shortcut
+          <hr />
+        </h6>
+        <div className="sub-menu">Cakes</div>
+        <div className="sub-menu1">Flowers</div>
+        <div className="sub-menu2">Gifts</div>
+        <div className="sub-menu00">Combos</div>
+        <div className="sub-menu01">Chocolates</div>
+        <div className="sub-menu02">Birthday Gifts</div>
+        <div className="sub-menu3">Personalized Gifts</div>
+        <div className="sub-menu001">Anniversary Gifts</div>
       </div>
-    </div>
-    <div className="location-box " onClick={() => setShowPopup(true)}>
-            <img src={img1} alt="India Flag" className="flag" />
-            <span className="country-code">IND</span>
-            <div className="vertical-line"></div>
-            <div className="divider"></div>
-            <i className="fa-solid fa-location-dot" style={{ marginLeft: "15px" }}></i>
-            <span className="choose-text" style={{ marginLeft: "10px" }}>
-              Choose Delivery Location
-            </span>
-            <i className="fa-solid fa-pen" style={{ marginLeft: "18px" }}></i>
-          </div>
-    
+    )}
+  </div>
+    <div
+  className="location-box w-md-35 mt-4 mt-md-0 ms-md-auto d-flex align-items-center justify-content-between"
+  onClick={() => setShowPopup(true)}
+>
+    <img src={img1} alt="India Flag" className="flag" />
+    <span className="country-code">IND</span>
+    <div className="vertical-line"></div>
+    <i className="fa-solid fa-location-dot ms-2"></i>
+    <span className="choose-text ms-2">Choose Delivery Location</span>
+    <i className="fa-solid fa-pen pencil"></i>
+  </div>
+
+</div>
+
           {showPopup && (
             <div className="popup-overlay" onClick={() => setShowPopup(false)}>
               <div className="popup-box" onClick={(e) => e.stopPropagation()}>
