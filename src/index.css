@@ -9,7 +9,6 @@ body{
   width: 100%;       
   z-index: 999;      
   background-color: #fff; 
-  height:100px
 }
  .detail {
   font-size: 14px;
@@ -96,14 +95,14 @@ body{
 @media (max-width: 769px) {
 
   .header-top {
-    height: 80px !important;
+    height: 150px !important;
   }
 
   .logo img {
     width: 120px !important;   
     position: relative !important;
-    bottom: 50px;
-    left: 60%;
+    bottom: 80px;
+    left: 40%;
     z-index: 9999 !important; 
   }
 
@@ -252,11 +251,11 @@ body{
 
 @media (max-width: 600px) {
   .search-bar {
-    width: 80%;
+    width: 90%;
     padding: 5px 12px;
     border-radius: 25px;
-    bottom:70px;
-    right: 58px;
+    bottom:90px;
+    right: 50px;
   }
   .text {
     font-size: 13px;
@@ -264,16 +263,15 @@ body{
   .search-bar i {
     font-size: 16px;
     margin-left: 5px;
-    right: 29%;
+    right: 10%;
   }
   .search-bar input{
-    width: 75%;
+    width: 100%;
     border: 1px solid black;
     border-radius: 5px;
-    
   }
   .search-tooltip {
-    top: 105%;
+    top: 106%;
     max-height: 200px;
     overflow-y: auto;
     padding: 10px;
@@ -615,7 +613,7 @@ body{
   z-index: 9999;
 }
 
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
   .location-box {
     flex-direction: column !important;
     align-items: center;
@@ -646,14 +644,14 @@ body{
     top: 40px;
     width: 150px;
   }
-} 
+}  */
 @media (max-width: 769px) {
 
   .location-box {
-    width: 68% !important;        
-    left: 37% !important;
+    width: 85% !important;        
+    left: 49% !important;
     transform: translateX(-50%);
-    top: 69px !important;
+    top: 73px !important;
     flex-direction: row !important;
     justify-content: center;
     padding: 8px 25px;              
@@ -662,15 +660,20 @@ body{
     border: 1px solid black;
     right:10%;
   }
+  .icons-right {
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+  }
 
   .choose-text {
     display: inline-block !important;
-    font-size: 14px;
+    font-size: 11px;
     font-weight: 600;
   }
 
   .pencil {
-    margin-right: 30px !important;
+    margin-right: 90px !important;
   }
 }
 @media screen and (max-width: 380px) {
@@ -681,6 +684,9 @@ body{
   .pencil {
     position: relative;
   }
+}
+@media screen and (min-width:1024px){
+  
 }
 @media (max-width: 769px) {
 
@@ -693,7 +699,8 @@ body{
   }
 
   .icons-right {
-    display: none;
+    position: relative;
+    top:50px
   }
 }
 
